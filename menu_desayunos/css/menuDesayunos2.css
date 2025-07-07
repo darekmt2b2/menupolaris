@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Planchette';
+  src: url('../../fonts/COOPBL.TTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 794px;
+  height: 1123px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background-color: #FFF7EC;
+  color: black;
+  font-family: 'Planchette';
+  background-size: 794px 1123px;
+  overflow: hidden;
+  padding-top: 40px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.backgroundwall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 794px;
+  height: 1123px;
+  background-image: url('../img/diani-charcoal-metallic-textured-tree-b-mdbz-l-removebg-preview.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(2.5px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ribbon-inline {
+  width: 150px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+#ribbon-top-left {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 100px;
+  z-index: 0;
+  pointer-events: none;
+  transform: scale(1.3);
+  transform-origin: top right;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  padding-top: 90px;
+}
+
+/* HEADINGS */
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 20px 10px;
+  width: 100%; /* or try a fixed value like 400px */
+  max-width: 600px; /* optional, to limit max width */
+}
+#cafes {
+  margin-left: 140px;
+}
+
+/* MENU SECTIONS */
+.menu-section {
+  margin-top: 0px;
+  padding: 0 20px;
+}
+
+/* LIST STYLING */
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.menu-items li span:first-child {
+  flex: 1;
+  text-align: left;
+}
+
+.menu-items li span:last-child {
+  min-width: 60px;
+  text-align: right;
+}
+
+/* COFFEE LAYOUT */
+.coffee-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.coffee-column {
+  flex: 1;
+}
+
+.coffee-image {
+  flex-shrink: 0;
+  height: 100%;
+  max-height: 85%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.coffee-image img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+/* TEA LAYOUT */
+.tea-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.tea-image {
+  flex-shrink: 0;
+  width: 208px;
+  height: 304px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 0; /* image first */
+  margin-right: 20px;
+  overflow: hidden;
+  background: transparent; /* or any background if you want */
+}
+
+.tea-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.tea-content {
+  flex: 1;
+  order: 1;
+}
+
+/*
+.corner-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 0;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.4); 
+  line-height: 1.3;
+  width: 100px;
+  pointer-events: none; 
+}
+*/
+.corner-image-top-right {
+  position: absolute;
+  top: 180px;         /* separa del borde superior */
+  right: 140px;       /* separa del borde derecho */
+  width: 120px;      /* ajusta según el tamaño deseado */
+  height: auto;
+  z-index: 0;
+  opacity: 0.4;      /* opcional: estilo decorativo */
+  pointer-events: none; /* para que no bloquee clics */
+
+  transform: scale(2.5);
+  transform-origin: top right;
+
+}
+
+.corner-image-bottom-right {
+  position: absolute;
+  bottom: 180px;         /* separa del borde superior */
+  right: 140px;       /* separa del borde derecho */
+  width: 120px;      /* ajusta según el tamaño deseado */
+  height: auto;
+  z-index: 0;
+  opacity: 0.4;      /* opcional: estilo decorativo */
+  pointer-events: none; /* para que no bloquee clics */
+
+  transform: scale(1.5);
+  transform-origin: bottom right;
+
+}
+
+/* PRINT STYLES */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1cm;
+  }
+
+  .background-logo {
+    display: block !important;
+  }
+
+  body,
+  .a4-container {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .a4-container {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding-top: 4cm;
+  }
+}
