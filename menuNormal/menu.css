@@ -135,6 +135,9 @@ body {
   font-size: 1.2rem;
 
 }
+#menu-raciones li {
+  font-size: 0.97rem; /* o el tamaño que necesites, por ejemplo: 0.9rem, 14px, etc */
+}
 #menu-sandwiches li {
   font-size: 0.97rem; /* o el tamaño que necesites, por ejemplo: 0.9rem, 14px, etc */
 }
